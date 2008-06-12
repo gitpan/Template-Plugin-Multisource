@@ -1,0 +1,21 @@
+Build.PL
+examples/README.examples
+HISTORY
+lib/Template/Plugin/Multisource.pm
+lib/Template/Plugin/Multisource.pod
+LICENSE
+Makefile.PL
+MANIFEST			This list of files
+README
+t/01.exp
+t/01.in
+t/01.out
+t/01.t
+t/01_AD.yaml
+t/01_Source1.yaml
+t/01_Source2.yaml
+t/pod.t
+t/pod_coverage.t
+t/runtests
+t/test.pl
+META.yml

@@ -1,0 +1,25 @@
+---
+name: Template-Plugin-Multisource
+version: 2.01
+author:
+  - 'Sullivan Beck <sbeck@cpan.org>'
+abstract: Interface to Data::NDS::Multisource operations
+license: perl
+resources:
+  license: http://dev.perl.org/licenses/
+requires:
+  Data::NDS::Multisource: 0
+  Template: 0
+  Template::Plugin: 0
+  perl: 5.6.0
+build_requires:
+  IO::File: 0
+  Test::More: 0
+provides:
+  Template::Plugin::Multisource:
+    file: lib/Template/Plugin/Multisource.pm
+    version: 2.01
+generated_by: Module::Build version 0.2808
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.2.html
+  version: 1.2

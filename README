@@ -1,0 +1,96 @@
+NAME
+    Template::Plugin::Multisource - Interface to Data::NDS::Multisource
+    operations
+
+SYNOPSIS
+       [% USE Multisource %]
+
+DESCRIPTION
+    This allows easy access of data stored in a Data::NDS::Multisource
+    structure (as documented in that module).
+
+METHODS
+    In all of the methods described below, obj is the name of a
+    Data::NDS::Multisource object. In the calling perl program, this was
+    created and passed in as:
+
+       $obj = new Data::NDS::Multisource(FILE);
+
+       $data = { "ms" => $obj, ... };
+
+       $t = Template->new();
+       $t->process(TEMPLATE,$data);
+
+    Template::Plugin::Multisource makes the following methods available:
+
+    sources
+           [% list = Multisource.sources(ms) %]
+
+        This returns the list of sources in the Multisource.
+
+    eles
+           [% list = Multisource.eles(ms) %]
+
+        This returns a list of elements in the Multisource.
+
+    eles_in_source
+           [% list = Multisource.eles_in_source(ms,source) %]
+
+        This returns a list of elements in the given source.
+
+    ele_in_sources
+           [% list = Multisource.ele_in_sources(ms,ele) %]
+
+        This returns a list of sources containing the given element.
+
+    ele_in_source
+           [% flag = Multisource.ele_in_source(ms,source,ele) %]
+
+        This returns 1 if the given element is in the source, 0 otherwise.
+
+    ele
+           [% flag = Multisource.ele(ms,ele) %]
+
+        This returns 1 if the given element is in any source, 0 otherwise.
+
+    access_val
+           [% val  = Multisource.access_val(ms,ele,path) %]
+
+        This return the value based on path. If path refers to a scalar, it
+        returns the value at the path. If path refers to a list, it returns
+        the length of the list.
+
+    access_list
+           [% list = Multisource.access(ms,ele,path) %]
+
+        This returns a list of values based on path. If path refers to a
+        list, it returns the elements in that list. If path refers to a
+        hash, it returns a list of keys in the hash.
+
+    which
+           [% list = Multisource.which(ms,path,val [,path,val, ...]) %]
+
+        This returns a list of all elements which match the criteria passed
+        in. Refer to the Data::NDS::Multisource module for the description
+        of the arguments.
+
+    which_sources
+           [% list = Multisource.which_sources(ms,$ele,$path,$flag) %]
+
+        This returns a list of all sources which contain a value for the
+        given path for the given element. Refer to the
+        Data::NDS::Multisource module for more information.
+
+        This returns only the list of sources. It does not return the first
+        argument ($found) described in the module.
+
+KNOWN PROBLEMS
+    None at this point.
+
+LICENSE
+    This script is free software; you can redistribute it and/or modify it
+    under the same terms as Perl itself.
+
+AUTHOR
+    Sullivan Beck (sbeck@cpan.org)
+
