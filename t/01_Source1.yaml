@@ -16,7 +16,7 @@ three:
 four:
   d :
     e : 4e
-  l : [ , l4 ]
+  l : [ '' , l4 ]
 
 five:
   l : [ l5a ]

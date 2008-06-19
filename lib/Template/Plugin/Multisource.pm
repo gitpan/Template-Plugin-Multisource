@@ -5,7 +5,7 @@ package Template::Plugin::Multisource;
 
 ###############################################################################
 
-$VERSION = "2.01";
+$VERSION = "2.02";
 
 require 5.004;
 

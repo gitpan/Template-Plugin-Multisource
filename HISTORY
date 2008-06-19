@@ -13,4 +13,7 @@ Version 2.00  2008-05-05
 Version 2.01  2008-06-12
    Additional changes to meet requirements on http://cpants.perl.org/
 
-Version 2.02
+Version 2.02  2008-06-19
+   Minor test change to work with YAML::Syck
+
+Version 2.03
